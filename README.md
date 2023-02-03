@@ -3,32 +3,32 @@
 </h1>
 
 ## Practice FastAPI!
-<h1 align="center">
-    <br> <img src="python-fast-api-dalle.png" height = 250 width = 250>
+<h1 align="left">
+    <br> <img src="fastapi_img.png" height = 150 width = 400>
 </h1>
 
-## Description
+## Project Description
 
-This project has the porpuse to create an real api project with Fast Api that allow us to understand and put in practice:
+BLX app intends to mimic an ecommerce platorm where users can register to buy products from other users, but also can register their own products to be sold.
+
+I used FastAPI package to develop the API Rest pattern, alongside with SQLAlchemy to manage the relatioship and connection with a local Postgress database and the API requests.
+    
+
+## What I have learned?
+
+This project has the porpuse to create an real api project with Fast Api that allowed me to understand and put in practice:
 
 - authentication principles with JWT, 
 - Develop and Config Database in Postgress SQL,
 - Log in and Signup methods, 
-- CRUD methods with Order's event
+- CRUD methods with HTTPs requests
 - Set up Automatic API Documentation with Swagger
 
 
-
-## Pizza Delivery Api 
 
 [![Perfil](https://img.shields.io/badge/perfil%20-%23323330.svg?&style=for-the-badge&logo=perfil&logoColor=black&color=F745B5)](https://github.com/rodrigolaa)
 
 **This Project was developed based a series of videos here:**
 
-[![Youtube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=QQXQAZuJSdw&list=PLEt8Tae2spYnLMAf8RGCNYhovIFZHVsPP&index=1)
+[![Youtube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=Hx6w7JXYHbY&list=PLuhCJtW2i-wKK9HjfYJI4RIcd9AMIi88k)
 ---
-
-
-## 🍜 Licença
-
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.<br>
