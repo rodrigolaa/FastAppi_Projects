@@ -20,8 +20,9 @@ This project has the porpuse to create an real api project with Fast Api that al
 
 - authentication principles with JWT, 
 - Develop and Config Database in Postgress SQL,
+- Auto generation of migrations in database with Alembic,
 - Log in and Signup methods, 
-- CRUD methods with HTTPs requests
+- CRUD methods with HTTPs requests,
 - Set up Automatic API Documentation with Swagger
 
 
