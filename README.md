@@ -25,7 +25,11 @@ This project has the porpuse to create an real api project with Fast Api that al
 - CRUD methods with HTTPs requests,
 - Set up Automatic API Documentation with Swagger
 
+<h1 align="left">
+    <br> <img src="https://ik.imagekit.io/k9qr1muy2/Screenshot_2023-03-07_105046.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678197059754" height = 150 width = 400>
+</h1>
 
+[Link of Postman Documentation](https://documenter.getpostman.com/view/17562240/2s93Joz6ab)
 
 [![Perfil](https://img.shields.io/badge/perfil%20-%23323330.svg?&style=for-the-badge&logo=perfil&logoColor=black&color=F745B5)](https://github.com/rodrigolaa)
 

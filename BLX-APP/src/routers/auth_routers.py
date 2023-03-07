@@ -22,7 +22,7 @@ def signup(user: User_schema, db: Session = Depends(get_db)):
         created_user = RepositoryUser(db).create(user)
         return created_user
 
-@router.get("/users", status_code= status.HTTP_200_OK,response_model=List[User_schema])
+@router.get("/users", status_code= status.HTTP_200_OK,response_model=List[User_schema_simple])
 def list_users(db: Session = Depends(get_db)):
     users = RepositoryUser(db).list_all_users()
     return users
