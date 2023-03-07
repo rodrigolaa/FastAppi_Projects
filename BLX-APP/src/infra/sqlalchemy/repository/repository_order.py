@@ -1,7 +1,8 @@
+from fastapi import HTTPException, status
 from sqlalchemy import update, delete
 from sqlalchemy.orm import Session
 from schemas.schemas import Order_schema, User_schema
-from infra.sqlalchemy.models.models import Order_db
+from infra.sqlalchemy.models.models import Order_db,Product_db
 
 class RepositoryOrder():
 
@@ -10,28 +11,30 @@ class RepositoryOrder():
 
     def create_order(self, order: Order_schema):
         db_order = Order_db(
-            product_id = order.product_id,
-            user_id = order.user_id,
-            quantity = order.quantity,
-            address = order.address,
-            type_delivery = order.type_delivery,
-            comments = order.comments
-            )
+                            product_id = order.product_id,
+                            user_id = order.user_id,
+                            quantity = order.quantity,
+                            address = order.address,
+                            type_delivery = order.type_delivery,
+                            comments = order.comments
+                            )
 
         self.db.add(db_order)
         self.db.commit()
         self.db.refresh(db_order)
         return db_order
     
-    def show_order_by_id(self, id:int):
-        pass
-
+    def show_order_by_id(self, id:int)-> Order_db:
+        order = self.db.query(Order_db).where(Order_db.id == id).first()
+        return order
+        
+            
     def list_orders_made_by_user(self, user_id:int):
-        orders = self.db.query(Order_db).all()
+        orders = self.db.query(Order_db).where(Order_db.user_id == user_id).all()
         return orders
 
     def list_orders_sold_by_user(self, user_id:int):
-        orders = self.db.query(Order_db).all()
+        orders = self.db.query(Order_db).join(Product_db).where(Product_db.user_id == user_id).all()
         return orders
 
     def edit_order(self, id:int, order_schema: Order_schema):

@@ -24,9 +24,16 @@ class User_schema(BaseModel):
     name: str
     phone: str
     email: str
-    senha: str
+    password: str
     products: List[Product_simple] = []
 
+    class Config:
+        orm_mode = True
+
+class User_schema_signin(BaseModel):
+    password: str
+    phone: str
+    
     class Config:
         orm_mode = True
 
@@ -50,8 +57,11 @@ class Order_schema(BaseModel):
     type_delivery: str
     comments: Optional[str] = 'No observations'
 
-    user_id: Optional[User_schema]
-    product_id: Optional[Product_schema]
+    user_id: Optional[int]
+    product_id: Optional[int]
+
+    user: Optional[User_schema_simple]
+    product: Optional[Product_simple]
 
     class Config:
         orm_mode = True

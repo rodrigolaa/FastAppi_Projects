@@ -10,10 +10,10 @@ class User_db(Base):
     name = Column(String)
     phone = Column(String)
     email = Column(String)
-    senha = Column(String)
+    password = Column(String)
 
-    products = relationship('Product', back_populates='users') #Refers to child class products relatonship one-to-may
-    my_orders = relationship("Order", back_populates="users")
+    products = relationship('Product_db', back_populates='users') #Refers to child class products relatonship one-to-may
+    my_orders = relationship("Order_db", back_populates="users")
 
 class Product_db(Base):
 
@@ -27,7 +27,7 @@ class Product_db(Base):
     size = Column(String)
 
     user_id = Column(Integer, ForeignKey('user.id', name = "fk_product"))
-    users = relationship('User_DB', back_populates='products') 
+    users = relationship('User_db', back_populates='products') 
 
 class Order_db(Base):
 
@@ -42,5 +42,5 @@ class Order_db(Base):
     product_id = Column(Integer, ForeignKey('product.id', name = "fk_order_product"))
     user_id = Column(Integer, ForeignKey('user.id', name = "fk_order_users"))
 
-    users= relationship('User_DB', back_populates='my_orders') 
-    product = relationship('Product') 
+    users= relationship('User_db', back_populates='my_orders') 
+    product = relationship('Product_db') 
