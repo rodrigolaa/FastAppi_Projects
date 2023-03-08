@@ -1,8 +1,9 @@
-from fastapi import FastAPI, Depends, Request, status
+from fastapi import FastAPI, Depends, Request, status, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
 from fastapi.routing import APIRoute
 from routers import product_router, auth_routers, orders_router
+from jobs import write_notification
 # from middlewares import timer
 
 #create_bd()
@@ -15,6 +16,11 @@ app.include_router(product_router.router)
 app.include_router(auth_routers.router, prefix='/auth')
 
 app.include_router(orders_router.router)
+
+@app.post('/send_email/{email}')
+def send_email(email:str, background_task: BackgroundTasks):
+      background_task.add_task(write_notification,email, 'Olá, tudo bem?')
+      return {'OK:': 'Message sent!'}
 
 #Middlewares
 @app.middleware('http')

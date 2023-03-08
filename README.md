@@ -24,9 +24,10 @@ This project has the porpuse to create an real api project with Fast Api that al
 - Log in and Signup methods, 
 - CRUD methods with HTTPs requests,
 - Set up Automatic API Documentation with Swagger
+- Config Middlewares and Background tasks
 
 <h1 align="left">
-    <br> <img src="https://ik.imagekit.io/k9qr1muy2/Screenshot_2023-03-07_105046.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678197059754" height = 150 width = 400>
+    <br> <img src="https://ik.imagekit.io/k9qr1muy2/Screenshot_2023-03-07_105046.png?ik-sdk-version=javascript-1.4.3&updatedAt=1678197059754" height = 200 width = 600>
 </h1>
 
 [Link of Postman Documentation](https://documenter.getpostman.com/view/17562240/2s93Joz6ab)
